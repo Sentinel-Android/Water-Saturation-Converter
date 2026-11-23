@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pressure to Saturation Temperature | Water Saturation</title>
+<meta name="description" content="Enter an absolute pressure to find the corresponding saturation temperature using the MATLAB table or textbook equation.">
+<meta name="theme-color" content="#174eac">
+<link rel="canonical" href="https://watersaturationconverter.aditusan.dev/pressure-to-temperature/">
+<link rel="stylesheet" href="../assets/site.css">
+<script defer src="../assets/site.js"></script>
+<script defer src="../assets/calculator.js"></script>
+</head>
+<body class="site-water">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">W</span>Water Saturation</a>
+    <nav class="site-nav" aria-label="Main navigation"><a href="../">Calculator</a>
+<a href="../temperature-to-pressure/">Temperature to pressure</a>
+<a href="../pressure-to-temperature/" aria-current="page">Pressure to temperature</a>
+<a href="../reference/">Reference</a></nav>
+  </div>
+</header>
+<main class="wrap page" id="main">
+<div class="title">
+  <a class="back" href="../">Main calculator</a>
+  <h1>Pressure to Saturation Temperature</h1>
+  <p>Enter an absolute pressure to find the corresponding saturation temperature using the MATLAB table or textbook equation.</p>
+</div>
+<noscript><p class="noscript notice">Enable JavaScript to run this calculator. The reference text and links remain available without it.</p></noscript>
+<p id="startup-error" class="notice startup-error" role="alert" hidden>The calculator could not load. Reload the page to retry.</p>
+<div class="calculator">
+      <section class="panel" aria-labelledby="lookup-heading">
+        <h2 class="panel-title" id="lookup-heading">Saturation lookup</h2>
+        <form class="panel-body" id="lookup" data-direction="temperature" autocomplete="off">
+          <div class="field-grid panel-section">
+            <div class="field field-wide"><label for="direction">Convert</label><select id="direction"><option value="pressure">Temperature to pressure</option><option value="temperature" selected>Pressure to temperature</option></select></div>
+            <div class="field field-wide"><label for="source">Method</label>
+              <select id="source">
+                <option value="table">MATLAB saturation table</option>
+                <option value="textbook">Textbook conversion equations</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-grid panel-section">
+            <div class="field"><label for="value" id="value-label">Absolute pressure</label><input name="value" type="number" id="value" step="any" required></div>
+            <div class="field"><label for="unit">Input unit</label><select id="unit"></select></div>
+          </div>
+          <p id="range" class="status"></p>
+          <div class="actions form-actions">
+            <button class="primary" type="submit" id="calculate" disabled>Calculate</button>
+            <button id="give-example" type="button">Give example</button>
+          </div>
+          <p id="lookup-error" class="status error" role="alert"></p>
+        </form>
+      </section>
+      <section class="panel" aria-labelledby="result-heading">
+        <div class="panel-title result-head">
+          <h2 id="result-heading">Result</h2>
+          <button id="copy-result" type="button" hidden>Copy result</button>
+        </div>
+        <div id="result" aria-live="polite"><p class="panel-body muted">Enter a value and click Calculate.</p></div>
+      </section>
+    </div>
+    <section class="section panel" id="water-saturation-history" aria-labelledby="history-heading">
+      <div class="panel-title history-header">
+        <h2 id="history-heading">Calculation history</h2>
+        <button class="history-clear" type="button" disabled>Clear history</button>
+      </div>
+      <div class="history-empty empty">No calculations yet.</div>
+      <ol class="history-list"></ol>
+      <p class="history-message" role="status"></p>
+    </section>
+    <section class="section" id="conversions" aria-labelledby="conversions-title">
+      <h2 id="conversions-title">Saturation conversions</h2>
+      <ul class="link-columns"><li><a href="../temperature-to-pressure/">Temperature to saturation pressure</a></li><li><a href="../pressure-to-temperature/">Pressure to saturation temperature</a></li></ul>
+    </section>
+    <section class="section" aria-labelledby="equations-title">
+      <div class="document-heading">
+        <h2 id="equations-title">Conversion equations</h2>
+      </div>
+      <div class="panel document-panel">
+        <section aria-labelledby="temperature-to-pressure">
+          <h3 id="temperature-to-pressure">Temperature to Saturated Pressure</h3>
+          <p>Use <var>t</var> in °C and <var>T</var> = <var>t</var> + 273.15 in K. <var>p</var><sub>sat</sub> is in kPa.</p>
+          <div class="math-equation" tabindex="0" role="region" aria-label="Conversion equation">
+            <math display="block">
+              <mtable columnalign="left">
+                <mtr><mtd><mrow>
+                  <mi>K</mi><mo>=</mo><mn>4.39553</mn><mo>−</mo><mn>6.2442</mn><mo>(</mo><mfrac><mi>T</mi><mn>1000</mn></mfrac><mo>)</mo>
+                </mrow></mtd></mtr>
+                <mtr><mtd><mrow>
+                  <mo>+</mo><mn>9.953</mn><msup><mrow><mo>(</mo><mfrac><mi>T</mi><mn>1000</mn></mfrac><mo>)</mo></mrow><mn>2</mn></msup>
+                  <mo>−</mo><mn>5.151</mn><msup><mrow><mo>(</mo><mfrac><mi>T</mi><mn>1000</mn></mfrac><mo>)</mo></mrow><mn>3</mn></msup>
+                </mrow></mtd></mtr>
+                <mtr><mtd><mrow>
+                  <msub><mi>p</mi><mtext>sat</mtext></msub><mo>=</mo><mn>22100</mn><mo>×</mo>
+                  <msup><mn>10</mn><mrow><mi>K</mi><mo>(</mo><mn>1</mn><mo>−</mo><mfrac><mn>647.30</mn><mi>T</mi></mfrac><mo>)</mo></mrow></msup>
+                </mrow></mtd></mtr>
+              </mtable>
+            </math>
+          </div>
+        </section>
+
+        <section aria-labelledby="pressure-to-temperature">
+          <h3 id="pressure-to-temperature">Pressure to Saturated Temperature</h3>
+          <p><var>α</var> = ln(<var>p</var>), with absolute pressure <var>p</var> in kPa. The equation covers 0–93 °C.</p>
+          <div class="math-equation" tabindex="0" role="region" aria-label="Conversion equation">
+            <math display="block">
+              <mtable columnalign="left">
+                <mtr><mtd><mrow>
+                  <msub><mi>t</mi><mtext>sat</mtext></msub><mo>=</mo><mn>6.54</mn><mo>+</mo><mn>14.526</mn><mi>α</mi>
+                  <mo>+</mo><mn>0.7389</mn><msup><mi>α</mi><mn>2</mn></msup>
+                </mrow></mtd></mtr>
+                <mtr><mtd><mrow>
+                  <mo>+</mo><mn>0.0949</mn><msup><mi>α</mi><mn>3</mn></msup>
+                  <mo>+</mo><mn>0.4569</mn><msup><mi>p</mi><mn>0.1984</mn></msup>
+                </mrow></mtd></mtr>
+              </mtable>
+            </math>
+          </div>
+        </section>
+      </div>
+    </section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="https://aditusan.dev/">aditusan.dev</a>
+    <nav aria-label="Footer navigation">
+      <a href="../">Calculator</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="https://github.com/Sentinel-Android/Water-Saturation-Converter">Source code</a>
+      <a href="https://fluidpropertiescalculator.aditusan.dev/">Fluid Properties</a>
+      <a href="https://psychrometricscalculator.aditusan.dev/">Psychrometric Tools</a>
+      <a href="https://adisolver.aditusan.dev/">ADI Solver</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,40 +1,63 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sources for the Water Saturation calculator.">
-  <meta name="theme-color" content="#f5f7fb">
-  <title>Water Saturation Converter | References</title>
-  <link rel="canonical" href="https://watersaturationconverter.aditusan.dev/reference/">
-  <link rel="stylesheet" href="../style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference | Water Saturation Converter</title>
+<meta name="description" content="Definitions, units, calculation methods, and sources for the saturation converter.">
+<meta name="theme-color" content="#174eac">
+<link rel="canonical" href="https://watersaturationconverter.aditusan.dev/reference/">
+<link rel="stylesheet" href="../assets/site.css">
+<script defer src="../assets/site.js"></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">W</span>Water Saturation</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="../">Calculator</a>
-        <a href="./" aria-current="page">References</a>
-      </nav>
-    </div>
-  </header>
-  <main class="wrap page" id="main">
-    <div class="document-heading">
-      <h1>References</h1>
-      <a class="back" href="../">Go to calculator</a>
-    </div>
-    <div class="panel document-panel">
-      <ul class="source-links">
+<body class="site-water">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">W</span>Water Saturation</a>
+    <nav class="site-nav" aria-label="Main navigation"><a href="../">Calculator</a>
+<a href="../temperature-to-pressure/">Temperature to pressure</a>
+<a href="../pressure-to-temperature/">Pressure to temperature</a>
+<a href="../reference/" aria-current="page">Reference</a></nav>
+  </div>
+</header>
+<main class="wrap page" id="main">
+<div class="title">
+  <a class="back" href="../">Main calculator</a>
+  <h1>Reference</h1>
+  <p>Definitions, units, calculation methods, and sources for the saturation converter.</p>
+</div>
+<section class="panel" aria-labelledby="definitions-title">
+  <h2 class="panel-title" id="definitions-title">Quantities and methods</h2>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Saturation quantities and methods"><table class="reference-table">
+    <thead><tr><th scope="col">Quantity or method</th><th scope="col">Units or range</th><th scope="col">Meaning</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Temperature, t</th><td>°C, °F, K</td><td>The input or calculated saturation temperature. The internal temperature unit is °C.</td></tr>
+      <tr><th scope="row">Absolute pressure, p</th><td>kPa, Pa, bar, MPa, psia</td><td>Saturation pressure measured relative to a vacuum. The internal pressure unit is kPa.</td></tr>
+      <tr><th scope="row">MATLAB saturation table</th><td>−60 to 160 °C; 0.00108 to 618.1392 kPa</td><td>The original tabulated data with piecewise cubic Hermite interpolation (PCHIP). As in the MATLAB code, values outside the table are extrapolated and marked in the result.</td></tr>
+      <tr><th scope="row">Textbook: temperature to pressure</th><td>0 to 200 °C</td><td>The original temperature correlation, using T = t + 273.15 in kelvin and returning pressure in kPa.</td></tr>
+      <tr><th scope="row">Textbook: pressure to temperature</th><td>0 to 93 °C output range</td><td>The direct logarithmic temperature correlation. Its accepted pressure range is shown by the calculator.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+<section class="section prose"><h2>Equations</h2><p>The <a href="../#equations-title">conversion equations</a> are shown below the main calculator. The two textbook correlations are separate approximations; the reverse calculation uses the original direct correlation.</p></section>
+<section class="section"><h2>Sources</h2><div class="panel panel-body"><ul class="source-links">
         <li><a href="https://www.routledge.com/Heating-and-Cooling-of-Buildings-Principles-and-Practice-of-Energy-Efficient/Reddy-Kreider-Curtiss-Rabl/p/book/9781315374567">Heating and Cooling of Buildings, 3rd edition, Chapter 13 · Psychrometric Properties and Processes</a></li>
         <li><a href="https://handbook.ashrae.org/handbooks/f17/si/F17_Ch01/f17_ch01_si.aspx">2017 ASHRAE Handbook — Fundamentals (SI), Chapter 1 · Psychrometrics</a></li>
-      </ul>
-    </div>
-  </main>
-  <footer class="site-footer"><div class="wrap">
+      </ul></div></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
     <a href="https://aditusan.dev/">aditusan.dev</a>
-    <nav aria-label="Related tools"><a href="https://fluidpropertiescalculator.aditusan.dev/">Fluid Properties Calculator</a><a href="https://psychrometrics.aditusan.dev/">Psychrometric Tools</a><a href="https://adi.aditusan.dev/">ADI Solver</a></nav>
-  </div></footer>
+    <nav aria-label="Footer navigation">
+      <a href="../">Calculator</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="https://github.com/Sentinel-Android/Water-Saturation-Converter">Source code</a>
+      <a href="https://fluidpropertiescalculator.aditusan.dev/">Fluid Properties</a>
+      <a href="https://psychrometricscalculator.aditusan.dev/">Psychrometric Tools</a>
+      <a href="https://adisolver.aditusan.dev/">ADI Solver</a>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>

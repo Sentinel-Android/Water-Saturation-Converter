@@ -2,4 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://watersaturationconverter.aditusan.dev/</loc></url>
   <url><loc>https://watersaturationconverter.aditusan.dev/reference/</loc></url>
+  <url><loc>https://watersaturationconverter.aditusan.dev/privacy/</loc></url>
+  <url><loc>https://watersaturationconverter.aditusan.dev/temperature-to-pressure/</loc></url>
+  <url><loc>https://watersaturationconverter.aditusan.dev/pressure-to-temperature/</loc></url>
 </urlset>
