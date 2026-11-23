@@ -353,7 +353,7 @@ select, input[type="text"], input[type="number"], input[type="search"], textarea
 
 /* Calculator-specific additions to the shared Psychrometric Tools / ADI design. */
 .brand-mark { flex-shrink: 0; }
-.site-nav a[aria-current="page"] { color: var(--blue); text-decoration: underline; }
+.site-nav a[aria-current="page"] { color: var(--ink); text-decoration: none; }
 select { appearance: none; padding-right: 1.9rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath d='m3 5 4 4 4-4' fill='none' stroke='%2342526b' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right .52rem center; }
 .form-actions, .result-actions, .history-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
 .result-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .4rem .8rem; }
